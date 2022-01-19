@@ -1,0 +1,24 @@
+#mainNavContainer {
+  background-color: #282828;
+  width: 300px;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+#mainNavContainer :nth-child(2) {
+  background-color: #505050;
+}
+#mainNavContainer p {
+  font-size: 20px;
+  margin: auto;
+  padding: 5px;
+}
+#mainNavContainer p:hover {
+  cursor: pointer;
+  background-color: #505050 !important;
+}
+#mainNavContainer #saveInfo {
+  display: none;
+}
+
+/*# sourceMappingURL=mainNav.css.map */

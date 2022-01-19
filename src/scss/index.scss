@@ -1,0 +1,161 @@
+$basicColor: rgb(0, 60, 255);
+$highLightColor: rgb(0, 132, 255);
+
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+
+html, body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 12px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+}
+
+
+/* Portrait layout (default) */
+#app {
+    display: none;
+    position: absolute;             /* position in the center of the screen */
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;                   /* text area height */
+    width: 100%;                   /* text area width */
+    text-align: center;
+}
+
+
+.appButton {
+    width: 150px;
+    color: white;
+    background-color: $basicColor;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+.appButton:hover {
+    cursor: pointer;
+    background-color: rgb(0, 132, 255);
+}
+
+
+.appButton:focus {
+    outline: none;
+}
+
+
+
+#mainAppContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+
+
+    #noDataInfoContainer {
+        color: lightgray;
+    }
+
+
+    .appElement {
+        display: none;
+    }
+
+
+    #changeFileContainer {
+        width: 100%;
+        height: 100vh;
+        overflow-y: hidden;
+
+
+        #userToolsContainer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 50px;
+            margin: 10px;
+
+            label {
+                font-size: 20px;
+            }
+        }
+
+
+        #pdfViewer {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+
+
+        #drawArea {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            background-color: lightskyblue;
+            border: 2px solid rgb(0, 191, 255);
+            opacity: 0.5;
+        }
+    }
+
+
+    #changeMetaDataContainer {
+        text-align: start;
+
+
+        h1 {
+            text-align: center;
+            margin: auto;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+label {
+    margin: 5px;
+    font-size: 25px;
+    color: black;
+}
+
+
+input {
+    margin: 5px;
+    padding: 2px;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: transparent;
+    font-size: 25px;
+    background-color: lightgray;
+    color: black;
+}
+
+
+input:focus {
+    outline: none;
+    border-color: $highLightColor;
+}
+
+
